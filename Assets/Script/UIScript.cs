@@ -220,10 +220,5 @@ public class UIScript : MonoBehaviour
 
     public void Set_Lid(GameObject newLid) { lid = newLid; }
 
-    public void Dismiss_Welcome()
-    {
-        GameObject.Find("AR Session Origin").GetComponent<PlacePrefab>().enabled = true;
-
-    }
 
 }
