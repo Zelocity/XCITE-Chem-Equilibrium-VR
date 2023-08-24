@@ -20,8 +20,13 @@ public class ParticleNet : MonoBehaviour
             float spawn_y = spawner.transform.position.y;
             float spawn_z = spawner.transform.position.z;
 
+
+           
+            
+           
+
             float newPos_X = Random.Range(spawn_x - .168f, spawn_x + 0.168f);
-            float newPos_Y = Random.Range(spawn_y + 0.03f, spawn_y + (0.19f + (.29f * spawnHeight)));
+            float newPos_Y = Random.Range(spawn_y + 5f, spawn_y + (0.19f + (10f * spawnHeight)));
             float newPos_Z = Random.Range(spawn_z - .1f, spawn_z + .1f);
 
 
