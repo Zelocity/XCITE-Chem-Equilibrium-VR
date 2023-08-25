@@ -104,6 +104,7 @@ public class ParticleGeneration : MonoBehaviour
                 //generate holds an instant of prefab with position from parameter and current rotation.
                 generate = Instantiate(prefab, position, prefab.transform.rotation);
 
+                /*Debug.Log("Position of Spawned N2O4: " + generate.transform.position);*/
                 //adds instant to the N2O4 list.
                 N2O4List.Add(generate);
             }
