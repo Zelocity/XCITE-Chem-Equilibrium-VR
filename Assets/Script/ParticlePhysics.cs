@@ -9,7 +9,7 @@ public class ParticlePhysics : MonoBehaviour
     private Vector3 lastFrameVelocity;
 
     [Header("movement")]
-    private float maxSpeed = 6f;
+    private float maxSpeed = 5f;
     private float minSpeed = 0;
     private float speedRange = 1f;
     private float avgSpeed = 3f;

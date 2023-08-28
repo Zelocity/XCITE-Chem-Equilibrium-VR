@@ -8,7 +8,7 @@ public class UIScript : MonoBehaviour
 {
 
 
-    [Header("N2O")]
+    [Header("NO2")]
     public TextMeshProUGUI NO2_Counter;
     public static int numNO2;
 
@@ -29,6 +29,7 @@ public class UIScript : MonoBehaviour
     private static float lid_current_pos;
     private static bool up_lid_pressure;
     private static bool down_lid_pressure;
+    private static float lidSpeed = 0.8f;
 
     [Header("Temperature")]
     public Slider temp_slider;
@@ -161,12 +162,12 @@ public class UIScript : MonoBehaviour
         if (up_lid_pressure == true && lid_start_pos > lid_current_pos)
         {
             //Debug.Log("go up");
-            lid.transform.Translate(Vector3.right * Time.deltaTime *.2f);
+            lid.transform.Translate(Vector3.right * Time.deltaTime * lidSpeed);
         }
         else if (down_lid_pressure == true && lid_level_diff < 412)
         {
             //Debug.Log("go down");
-            lid.transform.Translate(Vector3.left * Time.deltaTime * .2f);
+            lid.transform.Translate(Vector3.left * Time.deltaTime * lidSpeed);
         }
 
         //inputs percentage in decimal to set spawn height since spawn length is 10 and lid distance is 412.
