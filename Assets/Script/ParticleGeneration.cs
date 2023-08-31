@@ -8,7 +8,7 @@ public class ParticleGeneration : MonoBehaviour
 
     [Header("Particle")]
     private GameObject generate;
-    private float splitDistance = 5f;
+    private float splitDistance = .8f;
     [SerializeField] static public List<GameObject> moleculeList = null;
     [SerializeField] static public List<GameObject> N2O4List = null;
     
@@ -56,9 +56,9 @@ public class ParticleGeneration : MonoBehaviour
                 {
                     //randPos holds random position
 
-                    newPos_X = Random.Range(spawn_x - .168f, spawn_x + 0.168f);
-                    newPos_Y = Random.Range(spawn_y + 5f, spawn_y + (0.19f + (10f * spawnHeight)));
-                    newPos_Z = Random.Range(spawn_z - .1f, spawn_z + .1f);
+                    newPos_X = Random.Range(spawn_x - 3f, spawn_x + 3f);
+                    newPos_Y = Random.Range(spawn_y + .5f, spawn_y + (2.7f + (5.2f * spawnHeight)));
+                    newPos_Z = Random.Range(spawn_z - 2f, spawn_z + 2f);
 
                     //Debug.Log("spawn_y + (.2f + 10f * spawnHeight): " + (spawn_y + (.2f + 10f * spawnHeight)));
                     position = new Vector3(newPos_X, newPos_Y, newPos_Z);
@@ -170,7 +170,6 @@ public class ParticleGeneration : MonoBehaviour
     {
 
         spawnHeight = num;
-        Debug.LogWarning("this: " + (spawn.transform.position.y + 1.9f) + " SpawnHeight: " + spawnHeight + " num: " + num);
     }
 
     public float Get_Spawn_Height()
