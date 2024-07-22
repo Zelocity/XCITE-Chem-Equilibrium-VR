@@ -12,7 +12,7 @@ public class ParticlePhysics : MonoBehaviour
     private float maxSpeed = 5f;
     private float minSpeed = 0;
     private float speedRange = 1f;
-    private float avgSpeed = 3f;
+    private float avgSpeed = 1f;
     private float vNum1, vNum2, vNum3;
 
 
@@ -51,7 +51,7 @@ public class ParticlePhysics : MonoBehaviour
 
         //Debug.Log("Out Direction: " + direction);
         rb.velocity = direction.normalized * Mathf.Max(speed, 2f);
-         
+
     }
 
     public void Speed_Limit(float min, float max)

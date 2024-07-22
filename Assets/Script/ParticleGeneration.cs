@@ -99,15 +99,6 @@ public class ParticleGeneration : MonoBehaviour
 
                 //Debug.Log("Molecule List count after spawn = " + moleculeList.Count);
             }
-            else if(prefab.CompareTag("N2O4"))
-            {
-                //generate holds an instant of prefab with position from parameter and current rotation.
-                generate = Instantiate(prefab, position, prefab.transform.rotation);
-
-                /*Debug.Log("Position of Spawned N2O4: " + generate.transform.position);*/
-                //adds instant to the N2O4 list.
-                N2O4List.Add(generate);
-            }
             generate.transform.Translate(new Vector3(0, 0, 1 * Time.deltaTime));
         }
         //Debug.Log("MOLECULE LIST:" + moleculeList.Count);
